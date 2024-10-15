@@ -1,0 +1,8 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  helloWorld(limit: Int = 10, page: Int = 1): String!
+  helloWorldI18n(limit: Int = 10, page: Int = 1): String!
+}
