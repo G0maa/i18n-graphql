@@ -1,17 +1,21 @@
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { PaginationInput, PaginationInputI18n } from './dto/pagination.input';
+import { ResponseDto } from './dto/response.dto';
+import { ResponsesDto } from './dto/responses.dto';
 
 @Resolver()
 export class AppResolver {
-  @Query(() => String)
-  async helloWorld(@Args() args: PaginationInput): Promise<string> {
+  @Query(() => ResponsesDto)
+  async helloWorld(@Args() args: PaginationInput): Promise<ResponsesDto> {
     console.log('Regular', args);
-    return 'Hello World!';
+    return { data: [{ text: 'Hello World!', number: 1 }] };
   }
 
-  @Query(() => String)
-  async helloWorldI18n(@Args() args: PaginationInputI18n): Promise<string> {
+  @Query(() => ResponseDto)
+  async helloWorldI18n(
+    @Args() args: PaginationInputI18n,
+  ): Promise<ResponseDto> {
     console.log('I18n', args);
-    return 'Hello World!';
+    return { text: 'Hello World!', number: 1 };
   }
 }

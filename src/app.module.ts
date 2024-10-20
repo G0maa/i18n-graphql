@@ -25,15 +25,15 @@ console.log('__dirname', __dirname);
       playground: true,
       sortSchema: true,
     }),
-    I18nModule.forRoot({
-      fallbackLanguage: 'en',
-      loaderOptions: {
-        path: `${__dirname}/src/i18n/`,
-        watch: true,
-      },
-      typesOutputPath: path.join(__dirname, '../src/i18n/i18n.types.ts'),
-      resolvers: [AcceptLanguageResolver, GraphQLWebsocketResolver],
-    }),
+    // I18nModule.forRoot({
+    //   fallbackLanguage: 'en',
+    //   loaderOptions: {
+    //     path: `${__dirname}/src/i18n/`,
+    //     watch: true,
+    //   },
+    //   typesOutputPath: path.join(__dirname, '../src/i18n/i18n.types.ts'),
+    //   resolvers: [AcceptLanguageResolver, GraphQLWebsocketResolver],
+    // }),
   ],
   providers: [AppService, AppResolver],
   controllers: [AppController],

@@ -3,6 +3,15 @@
 # ------------------------------------------------------
 
 type Query {
-  helloWorld(limit: Int = 10, page: Int = 1): String!
-  helloWorldI18n(limit: Int = 10, page: Int = 1): String!
+  helloWorld(limit: Int = 10, page: Int = 1): ResponsesDto!
+  helloWorldI18n(limit: Int = 10, page: Int = 1): ResponseDto!
+}
+
+type ResponseDto {
+  number: Int!
+  text: String!
+}
+
+type ResponsesDto {
+  data: [ResponseDto]
 }
