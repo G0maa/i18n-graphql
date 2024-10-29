@@ -13,5 +13,5 @@ type ResponseDto {
 }
 
 type ResponsesDto {
-  data: [ResponseDto]
+  data: [ResponseDto!]!
 }
