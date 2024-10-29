@@ -3,6 +3,6 @@ import { ResponseDto } from './response.dto';
 
 @ObjectType()
 export class ResponsesDto {
-  @Field(() => [ResponseDto], { nullable: 'itemsAndList' })
+  @Field(() => [ResponseDto])
   data: ResponseDto[];
 }
