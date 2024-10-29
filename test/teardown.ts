@@ -10,5 +10,7 @@ export default async (): Promise<void> => {
 
   const app = moduleRef.createNestApplication();
   await app.init();
+  await app.close();
+
   console.log('# Finished Jest globalTeardown.');
 };
